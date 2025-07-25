@@ -212,11 +212,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/Frostube/DevToolKit/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Frostube/DevToolKit/discussions)
-- **Email**: [Your Email]
+- **Email**: frostube2000@gmail.com
 
 ---
 
-**Made with ❤️ by [Your Name]**
+**Made with ❤️ by Frostube**
 
 [![GitHub stars](https://img.shields.io/github/stars/Frostube/DevToolKit?style=social)](https://github.com/Frostube/DevToolKit/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Frostube/DevToolKit?style=social)](https://github.com/Frostube/DevToolKit/network)
