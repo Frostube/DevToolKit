@@ -35,6 +35,7 @@ interface ProcessedImage {
   id: string
   originalName: string
   originalImage: string
+  originalFile: File // Add this to store the original File
   webpImage: string
   info: ImageInfo
 }
@@ -182,6 +183,7 @@ export function WebPConverter() {
             id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
             originalName: file.name,
             originalImage: result,
+            originalFile: file, // Store the original File object
             webpImage: webpDataURL,
             info: {
               originalFormat: originalFormat.toUpperCase(),
@@ -288,7 +290,7 @@ export function WebPConverter() {
     try {
       const newProcessedImages: ProcessedImage[] = []
       for (const image of processedImages) {
-        const processedImage = await processImageToWebP(image.originalImage as File) // Use originalImage as File
+        const processedImage = await processImageToWebP(image.originalFile) // Use originalFile as File
         if (processedImage) {
           newProcessedImages.push(processedImage)
         }
@@ -313,7 +315,7 @@ export function WebPConverter() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-4xl mx-auto">
       {/* Hidden canvas for processing */}
       <canvas ref={canvasRef} style={{ display: 'none' }} />
       
@@ -329,7 +331,7 @@ export function WebPConverter() {
 
       {/* Breadcrumb */}
       <nav className="breadcrumb mb-8">
-        <Link href="/tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
+        <Link href="/#tool-categories" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
         <span className="breadcrumb-separator">/</span>
         <Link href="/image-tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Image Tools</Link>
         <span className="breadcrumb-separator">/</span>
