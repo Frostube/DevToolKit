@@ -74,6 +74,16 @@ export default function ConvertersPage() {
           </p>
         </div>
 
+        {/* Breadcrumb */}
+        <nav className="flex items-center justify-left space-x-2 text-sm text-gray-400 mb-8">
+          <Link href="/#tool-categories" className="hover:text-white transition-colors">
+            Tools
+          </Link>
+          <span>/</span>
+          <span className="text-white">File Converters</span>
+        </nav>
+
+
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {converters.map((tool) => {

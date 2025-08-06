@@ -42,10 +42,10 @@ export function UUIDGenerator() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-4xl mx-auto">
       {/* Breadcrumb */}
       <nav className="breadcrumb mb-8">
-        <Link href="/tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
+        <Link href="/#tool-categories" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
         <span className="breadcrumb-separator">/</span>
         <Link href="/generators" className="breadcrumb-item hover:text-slate-200 transition-colors">Generators</Link>
         <span className="breadcrumb-separator">/</span>

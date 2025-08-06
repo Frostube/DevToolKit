@@ -208,6 +208,14 @@ export default function FormattersPage() {
           </p>
         </div>
 
+        {/* Breadcrumb */}
+        <nav className="flex items-center justify-left space-x-2 text-sm text-gray-400 mb-8">
+          <Link href="/#tool-categories" className="hover:text-white transition-colors">
+            Tools
+          </Link>
+          <span>/</span>
+          <span className="text-white">Formatters</span>
+        </nav>
         {/* Priority Section - Most Popular Languages */}
         <div className="mb-16">
           <div className="flex items-center mb-8">

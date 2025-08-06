@@ -94,6 +94,19 @@ export default function ImageToolsPage() {
           </p>
         </div>
 
+
+        {/* Breadcrumb */}
+        <nav className="flex items-center justify-left space-x-2 text-sm text-gray-400 mb-8">
+          <Link href="/#tool-categories" className="hover:text-white transition-colors">
+            Tools
+          </Link>
+          <span>/</span>
+          <span className="text-white">Image Tools</span>
+        </nav>
+        
+
+        
+
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {imageTools.map((tool) => {

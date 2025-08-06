@@ -202,7 +202,7 @@ export function WebImageOptimizer() {
   const avgCompression = optimizedImages.length > 0 ? Math.round(optimizedImages.reduce((sum, img) => sum + img.compressionRatio, 0) / optimizedImages.length) : 0
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-4xl mx-auto">
       <canvas ref={canvasRef} style={{ display: 'none' }} />
       <input
         ref={fileInputRef}
@@ -214,7 +214,7 @@ export function WebImageOptimizer() {
       />
       {/* Breadcrumb */}
       <nav className="breadcrumb mb-8">
-        <Link href="/tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
+        <Link href="/#tool-categories" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
         <span className="breadcrumb-separator">/</span>
         <Link href="/image-tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Image Tools</Link>
         <span className="breadcrumb-separator">/</span>

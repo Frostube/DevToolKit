@@ -326,7 +326,7 @@ export function ImageCropper() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-4xl mx-auto">
       {/* Hidden canvas for processing */}
       <canvas ref={canvasRef} style={{ display: 'none' }} />
       
@@ -341,7 +341,7 @@ export function ImageCropper() {
 
       {/* Breadcrumb */}
       <nav className="breadcrumb mb-8">
-        <Link href="/tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
+        <Link href="/#tool-categories" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
         <span className="breadcrumb-separator">/</span>
         <Link href="/image-tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Image Tools</Link>
         <span className="breadcrumb-separator">/</span>

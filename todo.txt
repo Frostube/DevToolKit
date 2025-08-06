@@ -1,0 +1,1 @@
+with large files and many lines (around 1500 or 2000) the html formatter breaks up and gives bad formatting

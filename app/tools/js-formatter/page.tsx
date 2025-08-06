@@ -22,6 +22,7 @@ export default function JavaScriptFormatterPage() {
           </p>
         </div>
         
+        
         <JavaScriptFormatter />
       </div>
     </div>

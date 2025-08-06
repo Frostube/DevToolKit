@@ -210,7 +210,7 @@ export function JavaScriptFormatter() {
 
       {/* Breadcrumb */}
       <nav className="breadcrumb mb-8">
-        <Link href="/tools" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
+        <Link href="/#tool-categories" className="breadcrumb-item hover:text-slate-200 transition-colors">Tools</Link>
         <span className="breadcrumb-separator">/</span>
         <Link href="/formatters" className="breadcrumb-item hover:text-slate-200 transition-colors">Formatters</Link>
         <span className="breadcrumb-separator">/</span>

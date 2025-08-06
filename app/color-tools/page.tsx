@@ -8,7 +8,7 @@ const colorTools = [
     description: 'Pick and convert colors between formats (HEX, RGB, HSL, HSV)',
     icon: Pipette,
     href: '/tools/color-picker',
-    status: 'coming-soon',
+    status: 'ready',
     features: ['Format conversion', 'Color harmony', 'Accessibility check'],
     category: 'Conversion'
   },

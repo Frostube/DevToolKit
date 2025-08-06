@@ -1,66 +1,54 @@
-import { Hash, QrCode, Key, Dices, Fingerprint, Shield } from 'lucide-react'
+import { Hash, QrCode, Key, Dices, Fingerprint, Shield, FileText, Palette } from 'lucide-react'
 import Link from 'next/link'
 
 const generators = [
   {
     id: 'uuid-generator',
     name: 'UUID Generator',
-    description: 'Generate random UUIDs (v1, v4) for databases and applications',
-    icon: Fingerprint,
+    description: 'Generate RFC 4122 compliant UUIDs (Universally Unique Identifiers)',
+    icon: Hash,
     href: '/tools/uuid-generator',
-    status: 'ready',
-    features: ['Multiple versions', 'Bulk generation', 'Copy to clipboard'],
-    category: 'Identifiers'
+    status: 'ready' as const
   },
   {
     id: 'qr-generator',
     name: 'QR Code Generator',
-    description: 'Generate QR codes with custom colors, logos, and error correction',
+    description: 'Create QR codes with custom text, colors, and logos',
     icon: QrCode,
     href: '/tools/qr-generator',
-    status: 'coming-soon',
-    features: ['Custom styling', 'Logo embedding', 'High resolution'],
-    category: 'Visual'
+    status: 'ready' as const
   },
   {
     id: 'password-generator',
     name: 'Password Generator',
-    description: 'Generate secure passwords with customizable complexity',
+    description: 'Generate cryptographically secure passwords with customizable options',
     icon: Shield,
     href: '/tools/password-generator',
-    status: 'coming-soon',
-    features: ['Cryptographically secure', 'Custom rules', 'Strength meter'],
-    category: 'Security'
+    status: 'ready' as const
   },
   {
     id: 'hash-generator',
     name: 'Hash Generator',
-    description: 'Generate MD5, SHA-1, SHA-256, and other hash algorithms',
+    description: 'Generate cryptographic hashes (MD5, SHA-1, SHA-256, etc.)',
     icon: Hash,
     href: '/tools/hash-generator',
-    status: 'coming-soon',
-    features: ['Multiple algorithms', 'File hashing', 'Batch processing'],
-    category: 'Cryptography'
+    status: 'ready' as const
   },
   {
-    id: 'random-data',
-    name: 'Random Data Generator',
-    description: 'Generate random names, addresses, emails, and test data',
-    icon: Dices,
-    href: '/tools/random-data',
-    status: 'coming-soon',
-    features: ['Realistic data', 'Multiple formats', 'Locale support'],
-    category: 'Testing'
+    id: 'lorem-ipsum',
+    name: 'Lorem Ipsum Generator',
+    description: 'Generate placeholder text for design and development',
+    icon: FileText,
+    href: '/tools/lorem-ipsum',
+    status: 'ready' as const
   },
   {
-    id: 'api-key-generator',
-    name: 'API Key Generator',
-    description: 'Generate secure API keys and tokens for your applications',
-    icon: Key,
-    href: '/tools/api-key-generator',
-    status: 'coming-soon',
-    features: ['Secure generation', 'Custom length', 'Format options'],
-    category: 'Security'
+    id: 'color-generator',
+    name: 'Color Generator',
+    description: 'Generate random colors, palettes, and gradients',
+    icon: Palette,
+    href: '/tools/color-generator',
+    status: 'ready' as const
   }
 ]
 
@@ -78,10 +66,19 @@ export default function GeneratorsPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Generators
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Generate hashes, UUIDs, QR codes, passwords, and more. 
             Cryptographically secure tools for all your generation needs.
           </p>
+          
+          {/* Breadcrumb */}
+          <nav className="flex items-center justify-left space-x-2 text-sm text-gray-400 mb-8">
+            <Link href="/#tool-categories" className="hover:text-white transition-colors">
+              Tools
+            </Link>
+            <span>/</span>
+            <span className="text-white">Generators</span>
+          </nav>
         </div>
 
         {/* Tools Grid */}
@@ -111,10 +108,6 @@ export default function GeneratorsPage() {
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   
-                  <span className="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full border border-yellow-500/30 mb-3 inline-block">
-                    {tool.category}
-                  </span>
-                  
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors">
                     {tool.name}
                   </h3>
@@ -122,16 +115,6 @@ export default function GeneratorsPage() {
                   <p className="text-gray-400 mb-4">
                     {tool.description}
                   </p>
-
-                  {/* Features */}
-                  <div className="space-y-2 mb-4">
-                    {tool.features.map((feature, index) => (
-                      <div key={index} className="flex items-center text-sm text-gray-300">
-                        <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
                 {/* CTA */}
